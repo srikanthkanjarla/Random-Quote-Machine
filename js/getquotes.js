@@ -1,5 +1,4 @@
 //API link to get random quote - 'https://forismatic.com/en/api/'
-
 var url = "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?";
 var getRandomQuote = function(data) {
     var quoteText = data.quoteText;

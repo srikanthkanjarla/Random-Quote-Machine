@@ -40,7 +40,7 @@
      vertical-align: top;
      margin-left: 20px;
      /*color: #763235;*/
-     color: green;
+     color: #b7510c;
      font-size: 30px;
  }
  
@@ -52,7 +52,7 @@
  #quotes-box {
      background-color: #d7cec7;
      color: #763235;
-     min-height: calc(100vh - 150px);
+     min-height: calc(100vh - 160px);
      text-align: center;
  }
  
@@ -67,7 +67,7 @@
  
  #quote-text {
      font-family: 'Andale Mono', 'Georgia', 'Times', 'serif';
-     font-size: 25px;
+     font-size: 22px;
  }
  
  #quote-author {
@@ -103,12 +103,24 @@
      margin-right: 5px;
  }
  
- .btn-tweet:hover {
+ #tweet-quote:hover {
      background-color: #074c77;
  }
  
- .btn-quote:hover {
+ #get-quote:hover {
      background-color: #723007;
+ }
+ 
+ .fa-free-code-camp {
+     color: #008000;
+ }
+ 
+ footer .fa-twitter {
+     color: #0c7abf;
+ }
+ 
+ .fa-github {
+     color: #000;
  }
  /* footer Layout */
  
@@ -131,9 +143,18 @@
  }
  
  .site-info {
-     flex: 3;
+     flex: 2;
      text-align: center;
-     margin: 13px;
+     margin: 13px 0;
+     color: #0c7abf;
+ }
+ 
+ .site-info strong {
+     color: #b7510c;
+ }
+ 
+ .contact {
+     flex: 1;
  }
  /*style rules for small screen < 480px width - media query*/
  
