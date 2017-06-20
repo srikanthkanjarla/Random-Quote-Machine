@@ -6,7 +6,6 @@
     <title>FCC - Random Quote Machine</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/theme.css" />
-    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
 </head>
 
 <body>
@@ -22,26 +21,34 @@
             <div>
                 <blockquote id="quote-text">
 
-                    <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+                    <i class="fa fa-refresh fa-spin fa-2x fa-fw"></i>
                     <span class="sr-only">Loading...</span>
 
                 </blockquote>
                 <p id='quote-author'></p>
             </div>
-            <!--<button type="button" name="getQuote" id="get-quote" class="btn btn-quote"><i class="fa fa-random fa-lg" aria-hidden="true"></i>
- Next Quote</button> -->
+
             <a href="" id="get-quote" class="btn"><i class="fa fa-refresh fa-lg" aria-hidden="true"></i> New Quote</a>
             <a href="" id="tweet-quote" class="btn"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> Tweet</a>
         </section>
 
-        <footer>
-            <p>Coded by <strong> Srikanth K</strong></p>
-            <p>API source : <a href="https://forismatic.com/en/api/" target="_blank"> https://forismatic.com/en/api/</a>
+        <footer class="footer-box">
+            <section class="social-links">
+                <a href="https://www.freecodecamp.com/srikanthkanjarla" target="_balnk" title="Free Code Camp Profile"><i class="fa fa-free-code-camp " aria-hidden="true"></i></a>
+                <a href="https://github.com/srikanthkanjarla" target="_balnk" title="Git Hub Profile"><i class="fa fa-github " aria-hidden="true"></i></a>
+                <a href="https://twitter.com/srikanthkanjarl" target="_balnk" title="Twitter Profile"><i class="fa fa-twitter " aria-hidden="true"></i></a>
+            </section>
+            <section class="site-info">
+                <span>developed by <strong> Srikanth K</strong></span></br>
+                API : <a href="https://forismatic.com/en/api/" target="_blank" title="Quotes source API"> https://forismatic.com/en/api/</a>
+            </section>
+
         </footer>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="js/getquotes.js"></script>
-
+    <script src="js/get-quotes.js"></script>
+    <!--<script src="https://platform.twitter.com/widgets.js"></script> -->
+    <script src="js/twitter-window.js"></script>
 </body>
 
 </html>
