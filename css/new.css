@@ -1,0 +1,22 @@
+.fc {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header,
+section,
+footer {
+    flex: 1;
+    min-width: 100vw;
+}
+
+section#quotes {
+    min-height: calc(100vh - 200px);
+    background: lightgray;
+}
+
+img {
+    width: 60px;
+}
+
+<i class="fa fa-refresh fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span><i class="fa fa-spinner fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span><i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span><i class="fa fa-refresh fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span><i class="fa fa-cog fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span><i class="fa fa-spinner fa-pulse fa-3x fa-fw"></i><span class="sr-only">Loading...</span>

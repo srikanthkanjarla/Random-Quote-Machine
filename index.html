@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>FCC - Random Quote Machine</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/theme.css" />
+    <script type="text/javascript" async src="https://platform.twitter.com/widgets.js"></script>
+</head>
+
+<body>
+    <div class='fc'>
+        <header id="banner">
+            <span id="logo">
+                    <img src="images/logo2.svg" alt="random quote machine" />
+                    <i>Random Quote Machine</i>
+                </span>
+        </header>
+
+        <section id="quotes-box">
+            <div>
+                <blockquote id="quote-text">
+
+                    <i class="fa fa-refresh fa-spin fa-3x fa-fw"></i>
+                    <span class="sr-only">Loading...</span>
+
+                </blockquote>
+                <p id='quote-author'></p>
+            </div>
+            <!--<button type="button" name="getQuote" id="get-quote" class="btn btn-quote"><i class="fa fa-random fa-lg" aria-hidden="true"></i>
+ Next Quote</button> -->
+            <a href="" id="get-quote" class="btn"><i class="fa fa-refresh fa-lg" aria-hidden="true"></i> New Quote</a>
+            <a href="" id="tweet-quote" class="btn"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> Tweet</a>
+        </section>
+
+        <footer>
+            <p>Coded by <strong> Srikanth K</strong></p>
+            <p>API source : <a href="https://forismatic.com/en/api/" target="_blank"> https://forismatic.com/en/api/</a>
+        </footer>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/getquotes.js"></script>
+
+</body>
+
+</html>
