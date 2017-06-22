@@ -15,10 +15,13 @@
      text-decoration: none;
  }
  
- header,
+ header {
+     background-color: #405580;
+ }
+ 
  footer {
-     background-color: #D93A33;
-     color: #fff;
+     background-color: #4e4138;
+     /* background-color: #D93A33;*/
  }
  /* flex-box site layout */
  /* flex container*/
@@ -52,23 +55,24 @@
  .quotes-flex-container {
      display: flex;
      flex-flow: row wrap;
-     background-color: #d7cec7;
+     background-color: #d9db6d;
      color: #D93A33;
      text-align: center;
-     min-height: calc(100vh - 206px);
+     min-height: calc(100vh - 151px);
      justify-content: center;
      align-items: center;
      align-content: center;
  }
  
  .quotes-box {
-     background: lavender;
-     border-radius: 20px;
-     border: 1px solid #0c7abf;
      line-height: 1.5;
      flex: 2;
      min-width: calc(100vw - 100px);
      margin: 0 10px;
+ }
+ 
+ .loading-spin {
+     color: #D93A33;
  }
  
  .quote-btn-box {
@@ -81,13 +85,14 @@
  }
  
  #quote-text {
-     font-family: 'Andale Mono', 'Georgia', 'Times', 'serif';
+     font-family: 'PT Serif', serif, 'Andale Mono', 'Georgia', 'Times';
      font-size: 22px;
      padding: 20px;
+     color: #4e4138;
  }
  
  #quote-author {
-     color: #0c7abf;
+     color: #D93A33;
      font-family: cursive;
      font-size: 16px;
  }
@@ -121,11 +126,11 @@
  /* footer Layout */
  /* flex container for footer */
  
- .footer-box {
+ .footer-flex-container {
      display: flex;
      flex-flow: row wrap;
-     font-size: 16px;
-     min-height: 82px;
+     font-size: 18px;
+     text-align: center;
  }
  /* flex items in footer */
  
@@ -133,29 +138,20 @@
      flex: 1;
      margin-top: 5px;
      text-align: center;
+     color: #fff;
      align-self: center;
  }
  
  .site-info {
      align-self: center;
-     color: #fff;
+     color: #f08000;
      flex: 2;
      margin-top: 5px;
      text-align: center;
  }
  
- .site-info hr {
-     border: none;
-     height: 1px;
-     color: #333;
-     /* old IE */
-     background-color: #333;
-     /* Modern Browsers */
-     margin: 5px auto 0 auto;
- }
- 
  .github-link a {
-     color: #fff;
+     color: #f08000;
  }
  
  .contact {
@@ -169,18 +165,18 @@
  }
  
  .api-link a {
-     color: #000;
+     color: #fff;
  }
  /*style rules for small screen < 480px width - media query*/
  
  @media(max-width:480px) {
      .quotes-flex-container {
-         min-height: calc(100vh - 211px);
+         min-height: calc(100vh - 219px);
      }
      #banner {
          font-size: 21px
      }
-     .footer-box {
+     .footer-flex-container {
          flex-flow: column wrap;
      }
      .social-links a {
