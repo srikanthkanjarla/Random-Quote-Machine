@@ -1,83 +1,95 @@
  /* global styles */
  
- body {
+ * {
+     padding: 0;
      margin: 0;
  }
  
+ body,
+ html {
+     width: 100%;
+     min-height: 100vh;
+ }
+ 
+ a {
+     text-decoration: none;
+ }
+ 
  header,
  footer {
-     min-height: 60px;
- }
- 
- header {
-     margin-left: 30px;
- }
- 
- footer {
-     text-align: center;
+     background-color: #D93A33;
+     color: #fff;
  }
  /* flex-box site layout */
+ /* flex container*/
  
- .fc {
+ .main-flex-container {
      display: flex;
      flex-flow: row wrap;
      align-content: center;
+     justify-content: center;
  }
+ /* flex items */
  
  header,
- #quotes-box,
- footer {
+ .quotes-flex-container,
+ .footer-flex-container {
      min-width: calc(100vw - 100px);
      flex: 1;
  }
  
  #banner {
-     margin-top: 25px;
+     color: #fff;
+     font-size: 28px;
+     padding: 30px;
  }
  
- #banner i {
-     display: inline;
-     vertical-align: top;
-     margin-left: 20px;
-     /*color: #763235;*/
-     color: #b7510c;
-     font-size: 30px;
- }
- 
- #logo img {
-     width: 50px;
+ #banner>.fa {
+     margin-right: 20px;
  }
  /* styles for quote box */
  
- #quotes-box {
+ .quotes-flex-container {
+     display: flex;
+     flex-flow: row wrap;
      background-color: #d7cec7;
-     color: #763235;
-     min-height: calc(100vh - 160px);
+     color: #D93A33;
      text-align: center;
+     min-height: calc(100vh - 206px);
+     justify-content: center;
+     align-items: center;
+     align-content: center;
  }
  
- #quotes-box>div {
+ .quotes-box {
      background: lavender;
      border-radius: 20px;
-     border: 1px solid green;
-     margin: 120px 100px 0;
-     padding: 20px 0;
-     min-height: 100px;
+     border: 1px solid #0c7abf;
+     line-height: 1.5;
+     flex: 2;
+     min-width: calc(100vw - 100px);
+     margin: 0 10px;
+ }
+ 
+ .quote-btn-box {
+     flex: 1;
+     min-width: calc(100vw - 100px);
+ }
+ 
+ .quote-btn-box a {
+     margin: 25px 10px 10px 0;
  }
  
  #quote-text {
      font-family: 'Andale Mono', 'Georgia', 'Times', 'serif';
      font-size: 22px;
+     padding: 20px;
  }
  
  #quote-author {
-     color: green;
+     color: #0c7abf;
      font-family: cursive;
      font-size: 16px;
- }
- 
- a {
-     text-decoration: none;
  }
  /* styel rules for buttons */
  
@@ -87,7 +99,7 @@
      width: 120px;
      text-align: center;
      padding: 10px 0;
-     margin: 20px;
+     margin: 50px 20px;
      display: inline-block;
  }
  
@@ -96,11 +108,7 @@
  }
  
  #get-quote {
-     background-color: #b7510c;
- }
- 
- .fa {
-     margin-right: 5px;
+     background-color: #D93A33;
  }
  
  #tweet-quote:hover {
@@ -108,94 +116,74 @@
  }
  
  #get-quote:hover {
-     background-color: #723007;
- }
- 
- .fa-free-code-camp {
-     color: #008000;
- }
- 
- footer .fa-twitter {
-     color: #0c7abf;
- }
- 
- .fa-github {
-     color: #000;
+     background-color: #972823;
  }
  /* footer Layout */
+ /* flex container for footer */
  
  .footer-box {
      display: flex;
      flex-flow: row wrap;
      font-size: 16px;
-     color: #723007;
+     min-height: 82px;
  }
+ /* flex items in footer */
  
  .social-links {
      flex: 1;
+     margin-top: 5px;
      text-align: center;
- }
- 
- .social-links a {
-     display: inline-block;
-     margin: 13px;
-     font-size: 30px;
+     align-self: center;
  }
  
  .site-info {
+     align-self: center;
+     color: #fff;
      flex: 2;
+     margin-top: 5px;
      text-align: center;
-     margin: 13px 0;
-     color: #0c7abf;
  }
  
- .site-info strong {
-     color: #b7510c;
+ .site-info hr {
+     border: none;
+     height: 1px;
+     color: #333;
+     /* old IE */
+     background-color: #333;
+     /* Modern Browsers */
+     margin: 5px auto 0 auto;
+ }
+ 
+ .github-link a {
+     color: #fff;
  }
  
  .contact {
      flex: 1;
  }
+ 
+ .social-links a {
+     margin: 13px;
+     font-size: 30px;
+     color: #fff;
+ }
+ 
+ .api-link a {
+     color: #000;
+ }
  /*style rules for small screen < 480px width - media query*/
  
  @media(max-width:480px) {
-     header,
-     footer {
-         min-height: 20px;
-     }
-     header {
-         margin-left: 15px;
+     .quotes-flex-container {
+         min-height: calc(100vh - 199px);
      }
      #banner {
-         margin: 0 0 0 15px;
-         padding-top: 25px;
-     }
-     #banner i {
-         margin-left: 10px;
-         font-size: 20px;
-     }
-     #quotes-box>div {
-         margin: 50px 10px 10px;
-         padding: 5px 0;
-     }
-     #quotes-box {
-         min-height: calc(100vh - 120px);
-     }
-     #quote-text {
-         font-size: 20px;
-         line-height: 1.5;
-     }
-     .btn {
-         margin: 5px;
+         font-size: 23px
      }
      .footer-box {
          flex-flow: column wrap;
      }
      .social-links a {
-         margin: 5px;
-         font-size: 25px;
-     }
-     .site-info {
-         margin: 5px;
+         margin: 5px 5px;
      }
  }

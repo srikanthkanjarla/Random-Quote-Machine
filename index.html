@@ -9,16 +9,13 @@
 </head>
 
 <body>
-    <div class='fc'>
-        <header id="banner">
-            <span id="logo">
-                    <img src="images/logo.svg" alt="random quote machine" />
-                    <i>Random Quote Machine</i>
-                </span>
+    <div class='main-flex-container'>
+        <header>
+            <p id="banner"><i class="fa fa-free-code-camp fa-lg  " aria-hidden="true"></i>Random Quote Machine</p>
         </header>
 
-        <section id="quotes-box">
-            <div>
+        <section class="quotes-flex-container">
+            <div class="quotes-box">
                 <blockquote id="quote-text">
 
                     <i class="fa fa-refresh fa-spin fa-2x fa-fw"></i>
@@ -27,22 +24,29 @@
                 </blockquote>
                 <p id='quote-author'></p>
             </div>
-
-            <a href="" id="get-quote" class="btn"><i class="fa fa-refresh fa-lg" aria-hidden="true"></i> New Quote</a>
-            <a href="" id="tweet-quote" class="btn"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> Tweet</a>
+            <div class="quote-btn-box">
+                <a href="" id="get-quote" class="btn"><i class="fa fa-refresh fa-lg" aria-hidden="true"></i> New Quote</a>
+                <a href="" id="tweet-quote" class="btn"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> Tweet</a>
+            </div>
         </section>
 
-        <footer class="footer-box">
+        <footer class="footer-flex-container">
             <section class="social-links">
+
                 <a href="https://www.freecodecamp.com/srikanthkanjarla" target="_balnk" title="Free Code Camp Profile"><i class="fa fa-free-code-camp " aria-hidden="true"></i></a>
-                <a href="https://github.com/srikanthkanjarla" target="_balnk" title="Git Hub Profile"><i class="fa fa-github " aria-hidden="true"></i></a>
+                <a href="https://github.com/srikanthkanjarla" target="_balnk" title="Github Profile"><i class="fa fa-github " aria-hidden="true"></i></a>
                 <a href="https://twitter.com/srikanthkanjarl" target="_balnk" title="Twitter Profile"><i class="fa fa-twitter " aria-hidden="true"></i></a>
             </section>
             <section class="site-info">
-                <span>developed by <strong> Srikanth K</strong></span></br>
-                API : <a href="https://forismatic.com/en/api/" target="_blank" title="Quotes source API"> https://forismatic.com/en/api/</a>
+                <p>developed by <b> Srikanth K</b></p>
+                <p class="api-link">Source : <a href="https://forismatic.com/en/api/" target="_blank" title="Quotes source API"> https://forismatic.com/en/api/</a></p>
+                <p></p>
+                <hr>
+                <p class="github-link"><a href="https://github.com/srikanthkanjarla/Random-Quote-Machine" target="_blank" title="Github Repository"> github.com/srikanthkanjarla/Random-Quote-Machine</a></p>
+
             </section>
             <section class="contact">
+
             </section>
 
         </footer>
