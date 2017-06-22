@@ -175,10 +175,10 @@
  
  @media(max-width:480px) {
      .quotes-flex-container {
-         min-height: calc(100vh - 208px);
+         min-height: calc(100vh - 211px);
      }
      #banner {
-         font-size: 18px
+         font-size: 21px
      }
      .footer-box {
          flex-flow: column wrap;
