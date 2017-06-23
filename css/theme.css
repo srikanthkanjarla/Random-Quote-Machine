@@ -171,10 +171,16 @@
  
  @media(max-width:480px) {
      .quotes-flex-container {
-         min-height: calc(100vh - 219px);
+         min-height: calc(100vh - 213px);
      }
      #banner {
          font-size: 21px
+     }
+     #tweet-quote:hover {
+         background-color: #0c7abf;
+     }
+     #get-quote:hover {
+         background-color: #D93A33;
      }
      .footer-flex-container {
          flex-flow: column wrap;
