@@ -21,7 +21,6 @@
  
  footer {
      background-color: #4e4138;
-     /* background-color: #D93A33;*/
  }
  /* flex-box site layout */
  /* flex container*/
@@ -36,7 +35,8 @@
  
  header,
  .quotes-flex-container,
- .footer-flex-container {
+ .footer-flex-container,
+ .quote-btn-box {
      min-width: calc(100vw - 100px);
      flex: 1;
  }
@@ -55,13 +55,12 @@
  .quotes-flex-container {
      display: flex;
      flex-flow: row wrap;
-     background-color: #d9db6d;
-     color: #D93A33;
      text-align: center;
-     min-height: calc(100vh - 151px);
+     min-height: calc(100vh - 265px);
      justify-content: center;
      align-items: center;
      align-content: center;
+     background-color: #d9db6d;
  }
  
  .quotes-box {
@@ -77,7 +76,9 @@
  
  .quote-btn-box {
      flex: 1;
-     min-width: calc(100vw - 100px);
+     text-align: center;
+     min-height: 100px;
+     background-color: #d9db6d;
  }
  
  .quote-btn-box a {
@@ -106,6 +107,10 @@
      padding: 10px 0;
      margin: 50px 20px;
      display: inline-block;
+ }
+ 
+ .btn .fa {
+     margin-right: 5px;
  }
  
  #tweet-quote {
@@ -171,7 +176,7 @@
  
  @media(max-width:480px) {
      .quotes-flex-container {
-         min-height: calc(100vh - 213px);
+         min-height: calc(100vh - 314px);
      }
      #banner {
          font-size: 21px
