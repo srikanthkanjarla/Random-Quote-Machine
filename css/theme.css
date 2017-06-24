@@ -14,11 +14,18 @@
  a {
      text-decoration: none;
  }
+ /* button*/
  
- header {
-     background-color: #405580;
+ .btn {
+     border-radius: 5px;
+     color: #fff;
+     width: 120px;
+     text-align: center;
+     padding: 10px 0;
+     margin: 50px 20px;
+     display: inline-block;
  }
- /* flex-box site layout */
+ /* Layout using CSS3 Flexbox */
  /* flex container*/
  
  .main-flex-container {
@@ -29,12 +36,17 @@
  }
  /* flex items */
  
- header,
- .quotes-flex-container,
- .footer-flex-container,
+ .header-box,
+ .quotes-box,
+ .footer-box,
  .quote-btn-box {
      min-width: calc(100vw - 100px);
      flex: 1;
+ }
+ /*style rules for header section */
+ 
+ .header-box {
+     background-color: #405580;
  }
  
  #banner {
@@ -48,30 +60,33 @@
  }
  /* styles for quote box */
  
- .quotes-flex-container {
+ .quotes-box {
      display: flex;
-     flex-flow: row wrap;
+     flex-flow: column wrap;
+     justify-content: center;
      text-align: center;
      min-height: calc(100vh - 265px);
-     justify-content: center;
-     align-items: center;
-     align-content: center;
      background-color: #d9db6d;
- }
- 
- .quotes-box {
-     line-height: 1.5;
-     flex: 2 1 auto;
-     min-width: calc(100vw - 100px);
-     margin: 0 10px;
  }
  
  .loading-spin {
      color: #D93A33;
  }
  
+ #quote-text {
+     font: 300 24px/30px Poppins, Roboto, sans-serif;
+     padding: 20px;
+     letter-spacing: .05em;
+     color: #555;
+ }
+ 
+ #quote-author {
+     color: #D93A33;
+     font: 16px "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+ }
+ /*styles for quote-btn box*/
+ 
  .quote-btn-box {
-     flex: 1;
      text-align: center;
      min-height: 100px;
      background-color: #d9db6d;
@@ -80,30 +95,7 @@
  .quote-btn-box a {
      margin: 25px 10px 10px 0;
  }
- 
- #quote-text {
-     font-family: 'PT Serif', serif, 'Andale Mono', 'Georgia', 'Times';
-     font-size: 22px;
-     padding: 20px;
-     color: #4e4138;
- }
- 
- #quote-author {
-     color: #D93A33;
-     font-family: cursive;
-     font-size: 16px;
- }
  /* styel rules for buttons */
- 
- .btn {
-     border-radius: 5px;
-     color: #fff;
-     width: 120px;
-     text-align: center;
-     padding: 10px 0;
-     margin: 50px 20px;
-     display: inline-block;
- }
  
  .btn .fa {
      margin-right: 5px;
@@ -127,7 +119,7 @@
  /* footer Layout */
  /* flex container for footer */
  
- .footer-flex-container {
+ .footer-box {
      display: flex;
      flex-flow: row wrap;
      font-size: 16px;
@@ -138,11 +130,24 @@
  
  .social-links {
      flex: 1;
+     align-self: center;
      margin-top: 5px;
      text-align: center;
      color: #fff;
-     align-self: center;
      font-size: 18px;
+ }
+ 
+ .site-info {
+     align-self: center;
+     flex: 2;
+     margin-top: 5px;
+     text-align: center;
+     color: #405580;
+ }
+ 
+ .w3c-valid {
+     align-self: center;
+     flex: 1;
  }
  
  .social-links .fa-free-code-camp {
@@ -157,14 +162,6 @@
      color: #0c7abf;
  }
  
- .site-info {
-     align-self: center;
-     flex: 2;
-     margin-top: 5px;
-     text-align: center;
-     color: #405580;
- }
- 
  .github-repo a {
      color: #405580;
  }
@@ -172,10 +169,6 @@
  .github-repo a::before {
      content: 'Source: ';
      color: #D93A33;
- }
- 
- .contact {
-     flex: 1;
  }
  
  .social-links a {
@@ -190,8 +183,8 @@
  /*style rules for small screen < 480px width - media query*/
  
  @media(max-width:480px) {
-     .quotes-flex-container {
-         min-height: calc(100vh - 316px);
+     .quotes-box {
+         min-height: calc(100vh - 300px);
      }
      #banner {
          font-size: 21px
@@ -202,7 +195,7 @@
      #get-quote:hover {
          background-color: #D93A33;
      }
-     .footer-flex-container {
+     .footer-box {
          flex-flow: column wrap;
      }
      .social-links a {

@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-
 <head>
     <meta charset="utf-8" />
     <meta name=viewport content="width=device-width, initial-scale=1">
@@ -10,48 +9,47 @@
     <link rel="stylesheet" href="css/theme.css" />
 </head>
 
-<body>
-    <div class='main-flex-container'>
-        <header>
-            <p id="banner"><i class="fa fa-free-code-camp fa-lg  " aria-hidden="true"></i>Random Quote Machine</p>
-        </header>
+<body class='main-flex-container'>
 
-        <section class="quotes-flex-container">
-            <div class="quotes-box">
+    <header class="header-box">
+        <p id="banner"><i class="fa fa-free-code-camp fa-lg" aria-hidden="true"></i>Random Quote Machine</p>
+    </header>
 
-                <blockquote id="quote-text">
-
-                    <i class="fa fa-spinner fa-pulse fa-3x loading-spin" aria-hidden="true"></i>
-                    <span class="sr-only">Loading...</span>
-
-                </blockquote>
-                <p id='quote-author'></p>
-            </div>
-        </section>
-        <section class="quote-btn-box">
-            <a href="" id="get-quote" class="btn"><i class="fa fa-refresh fa-lg" aria-hidden="true"></i> New Quote</a>
-            <a href="" id="tweet-quote" class="btn"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> Tweet</a>
-        </section>
-
-        <footer class="footer-flex-container">
-            <section class="social-links">
-
-                <a href="https://www.freecodecamp.com/srikanthkanjarla" target="_balnk" title="Free Code Camp Profile"><i class="fa fa-free-code-camp " aria-hidden="true"></i></a>
-                <a href="https://github.com/srikanthkanjarla" target="_balnk" title="Github Profile"><i class="fa fa-github " aria-hidden="true"></i></a>
-                <a href="https://twitter.com/srikanthkanjarl" target="_balnk" title="Twitter Profile"><i class="fa fa-twitter " aria-hidden="true"></i></a>
-            </section>
-            <section class="site-info">
-                <p>developed by <b> Srikanth</b></p>
-                <!-- <p class="api-link">Source : <a href="https://forismatic.com/en/api/" target="_blank" title="Quotes source API"> https://forismatic.com/en/api/</a></p>-->
-                <p class="github-repo"><a href="https://github.com/srikanthkanjarla/Random-Quote-Machine" target="_blank" title="Github Repository">https://github.com/srikanthkanjarla/Random-Quote-Machine</a></p>
-                <p>© Copyright 2017</p>
-            </section>
-            <section class="contact">
-
-            </section>
-
-        </footer>
+    <div class="quotes-box">
+        <blockquote id="quote-text">
+            <i class="fa fa-spinner fa-pulse fa-3x loading-spin" aria-hidden="true"></i>
+            <span class="sr-only">Loading...</span>
+        </blockquote>
+        <p id='quote-author'></p>
     </div>
+
+    <div class="quote-btn-box">
+        <a href="" id="get-quote" class="btn"><i class="fa fa-refresh fa-lg" aria-hidden="true"></i> New Quote</a>
+        <a href="" id="tweet-quote" class="btn"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i> Tweet</a>
+    </div>
+
+    <footer class="footer-box">
+        <address class="social-links">
+            <a href="https://www.freecodecamp.com/srikanthkanjarla" target="_blank" title="Free Code Camp Profile"><i class="fa fa-free-code-camp " aria-hidden="true"></i></a>
+            <a href="https://github.com/srikanthkanjarla" target="_blank" title="Github Profile"><i class="fa fa-github " aria-hidden="true"></i></a>
+            <a href="https://twitter.com/srikanthkanjarl" target="_blank" title="Twitter Profile"><i class="fa fa-twitter " aria-hidden="true"></i></a>
+        </address>
+        <div class="site-info">
+
+            <!-- <p class="api-link">Source : <a href="https://forismatic.com/en/api/" target="_blank" title="Quotes source API"> https://forismatic.com/en/api/</a></p>-->
+            <p class="github-repo"><a href="https://github.com/srikanthkanjarla/Random-Quote-Machine" target="_blank" title="Github Repository">https://github.com/srikanthkanjarla/Random-Quote-Machine</a></p>
+
+        </div>
+        <div class="w3c-valid">
+            <p>
+                <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                    <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" alt="Valid CSS!" />
+                </a>
+            </p>
+        </div>
+
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="js/getquotes.js"></script>
     <!--<script src="https://platform.twitter.com/widgets.js"></script> -->
