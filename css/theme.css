@@ -201,4 +201,7 @@
      .social-links a {
          margin: 5px 5px;
      }
+     .w3c-valid {
+         align-self: flex-start
+     }
  }
