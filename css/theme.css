@@ -162,7 +162,8 @@
      color: #0c7abf;
  }
  
- .github-repo a {
+ .github-repo a,
+ .api-link a {
      color: #405580;
  }
  
@@ -177,8 +178,9 @@
      color: #fff;
  }
  
- .api-link a {
-     color: #fff;
+ .api-link a::before {
+     content: 'Powered By ';
+     color: #D93A33;
  }
  /*style rules for small screen < 480px width - media query*/
  
