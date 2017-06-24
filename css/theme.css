@@ -18,10 +18,6 @@
  header {
      background-color: #405580;
  }
- 
- footer {
-     background-color: #4e4138;
- }
  /* flex-box site layout */
  /* flex container*/
  
@@ -65,7 +61,7 @@
  
  .quotes-box {
      line-height: 1.5;
-     flex: 2;
+     flex: 2 1 auto;
      min-width: calc(100vw - 100px);
      margin: 0 10px;
  }
@@ -134,8 +130,9 @@
  .footer-flex-container {
      display: flex;
      flex-flow: row wrap;
-     font-size: 18px;
-     text-align: center;
+     font-size: 16px;
+     background-color: #ccc;
+     min-height: 75px;
  }
  /* flex items in footer */
  
@@ -145,18 +142,36 @@
      text-align: center;
      color: #fff;
      align-self: center;
+     font-size: 18px;
+ }
+ 
+ .social-links .fa-free-code-camp {
+     color: #008000;
+ }
+ 
+ .social-links .fa-github {
+     color: #000;
+ }
+ 
+ .social-links .fa-twitter {
+     color: #0c7abf;
  }
  
  .site-info {
      align-self: center;
-     color: #f08000;
      flex: 2;
      margin-top: 5px;
      text-align: center;
+     color: #405580;
  }
  
- .github-link a {
-     color: #f08000;
+ .github-repo a {
+     color: #405580;
+ }
+ 
+ .github-repo a::before {
+     content: 'Source: ';
+     color: #D93A33;
  }
  
  .contact {
@@ -176,7 +191,7 @@
  
  @media(max-width:480px) {
      .quotes-flex-container {
-         min-height: calc(100vh - 314px);
+         min-height: calc(100vh - 316px);
      }
      #banner {
          font-size: 21px
