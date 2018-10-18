@@ -1,11 +1,38 @@
 .header {
-    background-color: rgba(97, 231, 134, .8);
-
+    width: 10vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(231, 97, 194, .7);
 }
 
-.header-title {
-    margin-left: 20px;
-    color: var(--pineapple);
-    margin-top: 0;
-    padding: 12px;
+.header-text span {
+    height: 42px;
+    width: 50px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ffffff;
+    color: #61e786;
+    font-size: 2rem;
+    font-weight: bold;
+    transform: rotate(30deg);
+    background-color: rgba(255, 255, 255, .3);
+}
+
+span:nth-child(1),
+span:nth-child(6) {
+    color: rgb(231, 95, 192);
+    margin-top: 1px;
+    background-color: rgba(255, 255, 255, .9);
+}
+
+span:nth-child(odd) {
+    transform: skew(15deg);
+}
+
+span:nth-child(even) {
+    transform: skew(-15deg);
 }
