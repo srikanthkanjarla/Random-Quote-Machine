@@ -1,13 +1,13 @@
 :root {
-  --malachite-green: #61e786;
-  --honey-dew: #edffec;
-  --pineapple: #48435c;
-  --davys-grey: #5a5766;
+    --malachite-green: #61e786;
+    --honey-dew: #edffec;
+    --pineapple: #48435c;
+    --davys-grey: #5a5766;
+    --pullman-green: #322e18;
 }
 
 body {
-  padding: 0;
-  margin: 0;
-  font-family: 'Mali', cursive;
-  background-color: var(--honey-dew);
+    padding: 0;
+    margin: 0;
+    font-family: 'Mali', cursive;
 }
