@@ -1,0 +1,18 @@
+.app {
+    background: var(--pineapple);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+}
+
+.quote-container {
+    width: 85vw;
+    padding: 25px 35px;
+    background: rgba(231, 97, 194, .7);
+    color: #f1f7ee;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
