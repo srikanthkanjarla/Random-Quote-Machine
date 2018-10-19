@@ -1,0 +1,11 @@
+.btn-quote {
+    color: var(--pineapple);
+    background-color: var(--malachite-green);
+    border: 1px solid #ffffff;
+    padding: 12px 21px;
+    cursor: pointer;
+}
+
+.btn-quote:hover {
+    background-color: #35e064;
+}
