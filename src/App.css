@@ -4,15 +4,37 @@
     background-size: cover;
     background-position: center;
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.quote-container {
-    width: 85vw;
-    padding: 25px 35px;
+.container {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 90vw;
+    height: 100vh;
     background: rgba(231, 97, 194, .7);
     color: #f1f7ee;
-    display: flex;
-    flex-flow: column wrap;
     justify-content: center;
     align-items: center;
+}
+
+.content {
+    height: 90%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .app {
+        flex-direction: row;
+    }
+
+    .container {
+        width: 100vh;
+        height: 90vh;
+    }
+
 }
