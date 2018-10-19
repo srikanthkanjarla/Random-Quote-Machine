@@ -15,7 +15,7 @@ function Footer() {
         </a>
       </span>
       <span>
-        Images{" "}
+        Images from{" "}
         <a
           href="https://unsplash.com/"
           target="_blank"
@@ -25,9 +25,9 @@ function Footer() {
         </a>
       </span>
       <span>
-        Quotes{" "}
+        Quotes API{" "}
         <a
-          href="https://forismatic.com/en/"
+          href="https://forismatic.com/en/api/"
           target="_blank"
           rel="noopener noreferrer"
         >
