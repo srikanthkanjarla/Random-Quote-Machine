@@ -1,0 +1,21 @@
+.footer {
+    height: 8%;
+    width: 100%;
+    text-align: center;
+}
+
+.footer span {
+    margin: 0 25px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #61e786;
+    font-weight: 600;
+}
+
+@media (min-width:320px) and (max-width:480px) {
+    .footer span {
+        margin: 0 12px;
+    }
+}
