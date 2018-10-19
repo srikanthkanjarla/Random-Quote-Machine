@@ -4,19 +4,19 @@ self.__precacheManifest = [
     "url": "/Random-Quote-Machine/static/js/runtime~main.67122e2c.js"
   },
   {
-    "revision": "1f2b18226ca888212dae",
-    "url": "/Random-Quote-Machine/static/js/main.1f2b1822.chunk.js"
+    "revision": "c8dc05e0b674ae46002b",
+    "url": "/Random-Quote-Machine/static/js/main.c8dc05e0.chunk.js"
   },
   {
     "revision": "957ed945cc15ced9150b",
     "url": "/Random-Quote-Machine/static/js/1.957ed945.chunk.js"
   },
   {
-    "revision": "1f2b18226ca888212dae",
-    "url": "/Random-Quote-Machine/static/css/main.a5121167.chunk.css"
+    "revision": "c8dc05e0b674ae46002b",
+    "url": "/Random-Quote-Machine/static/css/main.9df85b2c.chunk.css"
   },
   {
-    "revision": "8912e1084fd1c3628bedab6188afdf2c",
+    "revision": "f1403906eb3cf74c9654f8a6eb47c3e5",
     "url": "/Random-Quote-Machine/index.html"
   }
 ];
