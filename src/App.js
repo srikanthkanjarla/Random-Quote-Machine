@@ -1,73 +1,78 @@
 import React from "react";
-import $ from "jquery";
-import "./App.css";
-import { library } from "@fortawesome/fontawesome-svg-core";
-import { fab } from "@fortawesome/free-brands-svg-icons";
-import { faQuoteLeft, faSyncAlt } from "@fortawesome/free-solid-svg-icons";
-
 import Header from "./components/Header";
-import Footer from "./components/Footer";
 import RandomQuote from "./components/RandomQuote";
-import Buttons from "./components/Buttons";
-
-library.add(fab, faQuoteLeft, faSyncAlt);
+import TwitterIntentLink from "./components/TwitterIntentLink";
+import GetQuoteButton from "./components/GetQuoteButton";
+import Footer from "./components/Footer";
+import "./App.css";
+import "./components/Button.css";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      quoteText: "",
-      quoteAuthor: "",
-      backgroundImg: "",
-      tweetPath: ""
+      quoteText:
+        "Be sure you put your feet in the right place, then stand firm",
+      quoteAuthor: "Abraham Lincoln",
+      backgroundImageURL: "",
+      twitterIntentURL: ""
     };
-    this.handleGetQuote = this.handleGetQuote.bind(this);
+    this.handleGetNewQuote = this.handleGetNewQuote.bind(this);
     this.handleTweetQuote = this.handleTweetQuote.bind(this);
     this.getRandomImage = this.getRandomImage.bind(this);
-    this.getRandomQuote = this.getRandomQuote.bind(this);
     this.updateQuoteData = this.updateQuoteData.bind(this);
+
+    // JSONP callback method and quotes API end-point
+    this.randomNum = Math.round(10000 * Math.random());
+    this.callbackMethodName = `cb_${this.randomNum}`;
+    this.END_POINT =
+      "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=";
   }
 
   componentDidMount() {
+    // JSONP global callback method
+    window[this.callbackMethodName] = data => {
+      this.updateQuoteData({ text: data.quoteText, author: data.quoteAuthor });
+    };
     this.getRandomQuote();
     this.getRandomImage();
   }
 
+  // JSONP function call to API
+  getJsonp(url, callback) {
+    const script = document.createElement("script");
+    script.id = `script_${this.callbackMethodName}`;
+    script.src = url + callback;
+    document.body.appendChild(script);
+    document.getElementById(script.id).remove();
+  }
+
+  getRandomQuote() {
+    this.getJsonp(this.END_POINT, this.callbackMethodName);
+  }
+
   getRandomImage() {
-    fetch("https://source.unsplash.com/random/1250X600")
+    fetch("https://source.unsplash.com/random/")
       .then(src => src.url)
-      .then(imgUrl => {
+      .then(imageURL => {
         this.setState({
-          backgroundImg: imgUrl
+          backgroundImageURL: imageURL
         });
       });
   }
 
-  getRandomQuote() {
-    const self = this;
-    $.ajax({
-      url:
-        "https://api.forismatic.com/api/1.0/?method=getQuote&key=457653&format=jsonp&lang=en&jsonp=?",
-      jsonp: "callback",
-      dataType: "jsonp",
-      success(response) {
-        self.updateQuoteData(response);
-      }
-    });
-  }
-
   updateQuoteData(data) {
-    if ((data.quoteText + data.quoteAuthor).length < 278) {
+    if ((data.text + data.author).length < 278) {
       this.setState({
-        quoteText: data.quoteText.replace(";", ","),
-        quoteAuthor: data.quoteAuthor
+        quoteText: data.text.replace(";", ","),
+        quoteAuthor: data.author
       });
     } else {
       this.getRandomQuote();
     }
   }
 
-  handleGetQuote() {
+  handleGetNewQuote() {
     this.getRandomQuote();
     this.getRandomImage();
   }
@@ -75,26 +80,32 @@ class App extends React.Component {
   handleTweetQuote() {
     const { quoteText, quoteAuthor } = this.state;
     this.setState({
-      tweetPath: `https://twitter.com/intent/tweet?text=${quoteText}--${quoteAuthor}`
+      twitterIntentURL: `https://twitter.com/intent/tweet?text=${quoteText}--${quoteAuthor}`
     });
   }
 
   render() {
-    const { quoteText, quoteAuthor, backgroundImg, tweetPath } = this.state;
+    const {
+      quoteText,
+      quoteAuthor,
+      backgroundImageURL,
+      twitterIntentURL
+    } = this.state;
+    const style = {
+      backgroundImage: `linear-gradient(rgba(125, 17, 40,0.5),rgb(125,17,40)),url(${backgroundImageURL})`
+    };
     return (
-      <div className="app" style={{ backgroundImage: `url(${backgroundImg})` }}>
+      <div className="app" style={style}>
         <Header />
-        <div className="container">
-          <div className="content">
-            <RandomQuote quoteText={quoteText} quoteAuthor={quoteAuthor} />
-            <Buttons
-              tweetPath={tweetPath}
-              handleTweetQuote={this.handleTweetQuote}
-              handleGetQuote={this.handleGetQuote}
-            />
-          </div>
-          <Footer />
+        <RandomQuote quoteText={quoteText} quoteAuthor={quoteAuthor} />
+        <div className="button-controls">
+          <TwitterIntentLink
+            src={twitterIntentURL}
+            onTweetQuote={this.handleTweetQuote}
+          />
+          <GetQuoteButton onGetNewQuote={this.handleGetNewQuote} />
         </div>
+        <Footer />
       </div>
     );
   }
