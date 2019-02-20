@@ -1,31 +1,37 @@
 .quote {
-    width: 60vw;
-    display: flex;
-    flex-direction: column;
-
+  width: 60vw;
+  height: 50vh;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  background-color: rgb(125, 17, 40, 0.6);
+  text-align: center;
+  border-radius: 1rem;
 }
 
 .quote-author {
-    align-self: flex-end;
-    font-weight: bold;
-}
-
-.fa-quote-left {
-    height: 4rem;
-    color: #61e786;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2.1rem;
+  color: #00ef00;
 }
 
 .quote-text {
-    font-size: 2rem;
+  margin-top: 0;
+  padding: 0.1rem;
+  font-size: 2rem;
+  color: #e6e6e6;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .quote {
-        width: 80vw;
-
-    }
-
-    .quote-text {
-        font-size: 1.4rem;
-    }
+  .quote {
+    width: 90vw;
+  }
+  .quote-text {
+    font-size: 1.4rem;
+  }
+  .quote-author {
+    font-size: 1.5rem;
+  }
 }

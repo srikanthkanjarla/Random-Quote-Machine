@@ -1,22 +1,32 @@
 .footer {
-    height: 8%;
+    height: 15vh;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     text-align: center;
 }
 
 .footer span {
-    margin: 0 25px;
+    margin: 0 1.5rem;
+    padding: 0.1rem 1rem;
+    color: #aaaaaa;
 }
 
 .footer a {
-    text-decoration: none;
-    color: #61e786;
-    font-weight: 600;
+    text-decoration-color: #ffffff;
+    color: var(--secondary-color);
+    font-weight: 500;
 }
 
-@media (min-width:320px) and (max-width:480px) {
-    .footer span {
-        display: block;
-        font-size: 0.8rem;
+.footer a:hover {
+    text-decoration: none;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .footer {
+        flex-flow: column;
+        align-items: center;
+        font-size: 0.9rem;
     }
 }

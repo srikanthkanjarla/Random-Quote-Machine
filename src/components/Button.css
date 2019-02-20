@@ -1,23 +1,42 @@
 .btn {
-    color: #ffffff;
-    font-size: 1.2rem;
-    font-weight: 600;
-    text-align: center;
-    text-decoration: none;
-    padding: 10px 15px;
-    margin: 20px;
-    box-sizing: border-box;
-    min-width: 150px;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 1.8rem;
+  padding: 0.6rem 0;
+  min-width: 9rem;
+  margin: 1.5rem;
 }
 
-.btn-group {
-    display: flex;
-    justify-content: center;
+.btn-quote {
+  color: var(--cralet);
+  border: none;
+  cursor: pointer;
+  background-color: #e7e4e4;
 }
 
-@media (max-width:480px) and (min-width:360px) {
-    .btn {
-        margin: 10px;
-        min-width: 120px;
-    }
+.btn-quote:hover {
+  background-color: #b1aeae;
+}
+
+.btn-tweet {
+  display: inline-block;
+  background-color: #0b95e0;
+}
+
+.btn-tweet:hover {
+  background-color: #02588d;
+}
+
+.btn-tweet:foucs {
+  outline: 0.06rem solid inherit;
+}
+
+@media (max-width: 480px) and (min-width: 360px) {
+  .btn {
+    margin: 0.6rem;
+    min-width: 7rem;
+  }
 }
